@@ -1,0 +1,33 @@
+{
+  "name": "@oc-soft/wp-range",
+  "version": "0.1.0",
+  "description": "wordpress range input for customizer control ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate-php": "node tools/php-gen.mjs",
+    "copy-php": "node tools/php-copy.mjs",
+    "build-php": "npm run generate-php && npm run copy-php",
+    "build-js": "rollup -c rollup.config.js",
+    "build-css": "sass src/style/oc-range.scss dist/css/oc-range.css",
+    "build": "npm run build-js && npm run build-php && npm run build-css"
+  },
+  "keywords": [
+    "range",
+    "input",
+    "wordpress",
+    "theme",
+    "customizer"
+  ],
+  "author": "Toshiyuki Ogawa",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-alias": "^3.1.9",
+    "ejs": "^3.1.6",
+    "rollup": "^2.64.0",
+    "rollup-plugin-string": "^3.0.0"
+  },
+  "dependencies": {
+    "sass": "^1.48.0"
+  }
+}
